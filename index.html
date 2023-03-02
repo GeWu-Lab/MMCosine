@@ -174,7 +174,7 @@
                 type="video/mp4">
       </video> -->
                 <h2 class="subtitle has-text-centered">
-                    <span class="dnerf">MMCosine</span>mitigates the imbalanced optimization of audio and visual modalities in discriminative Multi-Modal fine-grained learning
+                    <span class="dnerf">MMCosine</span> mitigates the imbalanced optimization of audio and visual modalities in discriminative Multi-Modal fine-grained learning
                 </h2>
             </div>
         </div>
@@ -247,17 +247,16 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            We present the first method capable of photorealistically reconstructing a non-rigidly deforming scene using photos/videos captured casually from mobile phones.
+                            Audio-visual learning helps to comprehensively understand the world by fusing practical information from multiple modalities. However, recent studies show that the imbalanced optimization of uni-modal encoders in a joint-learning model is a bottleneck
+                            to enhancing the model`s performance. We further find that the up-to-date imbalance-mitigating methods fail on some audio-visual fine-grained tasks, which have a higher demand for distinguishable feature distribution.
                         </p>
                         <p>
-                            Our approach augments neural radiance fields (NeRF) by optimizing an additional continuous volumetric deformation field that warps each observed point into a canonical 5D NeRF. We observe that these NeRF-like deformation fields are prone to local minima,
-                            and propose a coarse-to-fine optimization method for coordinate-based models that allows for more robust optimization. By adapting principles from geometry processing and physical simulation to NeRF-like models, we propose
-                            an elastic regularization of the deformation field that further improves robustness.
+                            Fueled by the success of cosine loss that builds hyperspherical feature spaces and achieves lower intra-class angular variability, this paper proposes Multi-Modal Cosine loss, <span class="dnerf">MMCosine</span>. It performs
+                            a modality-wise L2 normalization to features and weights towards balanced and better multi-modal fine-grained learning. We demonstrate that our method can alleviate the imbalanced optimization from the perspective of weight
+                            norm and fully exploit the discriminability of the cosine metric.
                         </p>
                         <p>
-                            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie photos/videos into deformable NeRF models that allow for photorealistic renderings of the subject from arbitrary viewpoints, which we dub <i>"nerfies"</i>.
-                            We evaluate our method by collecting data using a rig with two mobile phones that take time-synchronized photos, yielding train/validation images of the same pose at different viewpoints. We show that our method faithfully
-                            reconstructs non-rigidly deforming scenes and reproduces unseen views with high fidelity.
+                            Extensive experiments prove the effectiveness of our method and the versatility with advanced multi-modal fusion strategies and up-to-date imbalance-mitigating methods.
                         </p>
                     </div>
                 </div>
