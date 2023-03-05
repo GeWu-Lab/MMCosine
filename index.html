@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" href="./static/images/favicon.svg">
+    <link rel="icon" href="./static/images/logo.png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -243,7 +243,7 @@
                         </p>
                         <p>
                             Fueled by the success of cosine loss that builds hyperspherical feature spaces and achieves lower intra-class angular variability, this paper proposes Multi-Modal Cosine loss, <span class="dnerf">MMCosine</span>. It performs
-                            a modality-wise L2 normalization to features and weights towards balanced and better multi-modal fine-grained learning. We demonstrate that our method can alleviate the imbalanced optimization from the perspective of weight
+                            a modality-wise $L_2$ normalization to features and weights towards balanced and better multi-modal fine-grained learning. We demonstrate that our method can alleviate the imbalanced optimization from the perspective of weight
                             norm and fully exploit the discriminability of the cosine metric.
                         </p>
                         <p>
@@ -328,6 +328,40 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered">
+
+                <!-- Visual Effects. -->
+                <div class="column">
+                    <div class="content">
+                        <h2 class="title is-3">Gap Mitigation</h2>
+
+
+                        <img src="./static/images/result2.png">
+
+                        <p>
+                            The performance gap of uni-modal encoders is reduced by MMCosine, with the weak modality and the joint model boosted.
+                        </p>
+                    </div>
+                </div>
+                <!--/ Visual Effects. -->
+
+                <!-- Matting. -->
+                <div class="column">
+                    <div class="content">
+                        <h2 class="title is-3">Cosine discriminability</h2>
+
+
+                        <img src="./static/images/result3.png">
+
+                        <p>
+                            The learned angles between uni-modal features and ground-truth class centers become more compact. MMCosine can lower the intra-class angular variation and maximize the discriminability of cosine metric.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -339,41 +373,42 @@
 
 
 
-    <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
-            <pre><code>@article{ruize2023mmcosine,
+
+            <section class="section" id="BibTeX">
+                <div class="container is-max-desktop content">
+                    <h2 class="title">BibTeX</h2>
+                    <pre><code>@article{ruize2023mmcosine,
   author={Ruize, Xu and Ruoxuan, Feng and Shi-xiong, Zhang. and Di, Hu},
   booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   year={2023},
   organization={IEEE},
 }</code></pre>
-        </div>
-    </section>
+                </div>
+            </section>
 
 
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-                <a class="icon-link" href="https://rick-xu315.github.io/" class="external-link" disabled>
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="content">
+            <footer class="footer">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <a class="icon-link" href="https://rick-xu315.github.io/MMCosine.pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                        <a class="icon-link" href="https://rick-xu315.github.io/" class="external-link" disabled>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="columns is-centered">
+                        <div class="column is-8">
+                            <div class="content">
 
-                        <p>
-                            Thanks to <a href="https://nerfies.github.io/">Nerfies</a> for providing the template of this page.
-                        </p>
+                                <p>
+                                    Thanks to <a href="https://nerfies.github.io/">Nerfies</a> for providing the template of this page.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </footer>
 
 </body>
 
