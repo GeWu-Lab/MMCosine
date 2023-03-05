@@ -277,100 +277,74 @@
     </section>
 
 
-    <section class="section">
+    <section class="hero teaser">
         <div class="container is-max-desktop">
-
-            <div class="columns is-centered">
-
-                <!-- Visual Effects. -->
-                <div class="column">
-                    <div class="content">
-                        <h2 class="title is-3">Visual Effects</h2>
-                        <p>
-                            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect would be impossible without nerfies since it would require going through a wall.
-                        </p>
-                        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-                    </div>
-                </div>
-                <!--/ Visual Effects. -->
-
-                <!-- Matting. -->
-                <div class="column">
-                    <h2 class="title is-3">Matting</h2>
-                    <div class="columns is-centered">
-                        <div class="column content">
-                            <p>
-                                As a byproduct of our method, we can also solve the matting problem by ignoring samples that fall outside of a bounding box during rendering.
-                            </p>
-                            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="hero-body">
+                <h2 class="title is-2 has-text-centered">Method</h2>
+                <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/images/method.pdf">
+            </video> -->
+                <!-- <embed src="./static/images/method.pdf" type="application/pdf"> -->
+                <embed src="./static/images/all.pdf" type="application/pdf">
+                <br><br>
+                <h2 class="subtitle has-text-justified">
+                    <b>(a,b)</b> In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality
+                    keeps under-optimized.
+                    <b>(c,d)</b> Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
+                </h2>
             </div>
         </div>
-        <!--/ Matting. -->
+    </section>
 
-        <!-- Animation. -->
-        <div class="columns is-centered">
-            <div class="column is-full-width">
-                <h2 class="title is-3">Method</h2>
+    <!--/ Matting. -->
 
-                <!-- Interpolating. -->
-                <h3 class="title is-4">Imbalanced optimization in multi-modal co-learning</h3>
-                <embed src="./static/images/all.pdf" type="application/pdf">
-                <div class="content has-text-justified">
-                    <p>
-                        (a,b) In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality keeps under-optimized.
-                        (c,d) Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
-                    </p>
-                </div>
+    <!-- Animation. -->
+    <div class="columns is-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3"></h2>
 
-                <div class="columns is-vcentered interpolation-panel">
-                    <div class="column is-3 has-text-centered">
-                        <img src="./static/images/interpolate_start.jpg" class="interpolation-image" alt="Interpolate start reference image." />
-                        <p>Start Frame</p>
-                    </div>
-                    <div class="column interpolation-video-column">
-                        <div id="interpolation-image-wrapper">
-                            Loading...
-                        </div>
-                        <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="100" value="0" type="range">
-                    </div>
-                    <div class="column is-3 has-text-centered">
-                        <img src="./static/images/interpolate_end.jpg" class="interpolation-image" alt="Interpolation end reference image." />
-                        <p class="is-bold">End Frame</p>
-                    </div>
-                </div>
-                <br/>
-                <!--/ Interpolating. -->
+            <!-- Interpolating. -->
+            <h3 class="title is-4">Imbalanced optimization in multi-modal co-learning</h3>
+            <embed src="./static/images/all.pdf" type="application/pdf">
+            <div class="content has-text-justified">
+                <p>
+                    (a,b) In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality keeps under-optimized.
+                    (c,d) Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
+                </p>
+            </div>
 
-                <!-- Re-rendering. -->
-                <h3 class="title is-4">Re-rendering the input video</h3>
-                <div class="content has-text-justified">
-                    <p>
-                        Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel viewpoint such as a stabilized camera by playing back the training deformations.
-                    </p>
-                </div>
-                <div class="content has-text-centered">
-                    <video id="replay-video" controls muted preload playsinline width="75%">
+            <h3 class="title is-4">Modality-wise normalization of weights and features</h3>
+            <embed src="./static/images/pipeline.pdf" type="application/pdf">
+            <div class="content has-text-justified">
+                <p>
+                    (a,b) In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality keeps under-optimized.
+                    (c,d) Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
+                </p>
+            </div>
+
+            <br/>
+            <!--/ Interpolating. -->
+
+            <!-- Re-rendering. -->
+            <h3 class="title is-4">Re-rendering the input video</h3>
+            <div class="content has-text-justified">
+                <p>
+                    Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel viewpoint such as a stabilized camera by playing back the training deformations.
+                </p>
+            </div>
+            <div class="content has-text-centered">
+                <video id="replay-video" controls muted preload playsinline width="75%">
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-                </div>
-                <!--/ Re-rendering. -->
+            </div>
+            <!--/ Re-rendering. -->
 
-                <!--/ Animation. -->
+            <!--/ Animation. -->
 
 
-                <!-- Concurrent Work. -->
-                <!-- <div class="columns is-centered">
+            <!-- Concurrent Work. -->
+            <!-- <div class="columns is-centered">
             <div class="column is-full-width">
                 <h2 class="title is-3">Related Links</h2>
 
@@ -393,47 +367,47 @@
                 </div>
             </div>
         </div> -->
-                <!--/ Concurrent Work. -->
+            <!--/ Concurrent Work. -->
 
-            </div>
-    </section>
+        </div>
+        </section>
 
 
-    <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
-            <pre><code>@article{ruize2023mmcosine,
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>@article{ruize2023mmcosine,
   author={Ruize, Xu and Ruoxuan, Feng and Shi-xiong, Zhang. and Di, Hu},
   booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   year={2023},
   organization={IEEE},
 }</code></pre>
-        </div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-                <a class="icon-link" href="https://rick-xu315.github.io/" class="external-link" disabled>
-                    <i class="fab fa-github"></i>
-                </a>
             </div>
-            <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="content">
+        </section>
 
-                        <p>
-                            Thanks to <a href="https://nerfies.github.io/">Nerfies</a> for providing the template of this page.
-                        </p>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://rick-xu315.github.io/" class="external-link" disabled>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+
+                            <p>
+                                Thanks to <a href="https://nerfies.github.io/">Nerfies</a> for providing the template of this page.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 </body>
 
