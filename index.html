@@ -7,7 +7,10 @@
     <meta name="keywords" content="Multi-Modal, Cosine-loss">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MMCosine: Multi-Modal Cosine Loss Towards Balanced Audio-Visual Fine-Grained Learning</title>
-
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true } });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
     <script>
@@ -289,7 +292,7 @@
                 <img src='./static/images/all.png'>
                 <br><br>
                 <h2 class="subtitle has-text-justified">
-                    <b>(a,b)</b> In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality
+                    <b>(a,b)</b> In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant audio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality
                     keeps under-optimized.
                     <b>(c,d)</b> Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
                 </h2>
@@ -306,12 +309,10 @@
               <source src="./static/images/method.pdf">
             </video> -->
                 <!-- <embed src="./static/images/method.pdf" type="application/pdf"> -->
-                <embed src="./static/images/pipeline.pdf" type="application/pdf" width="100" height="100">
+                <img src='./static/images/method.png'>
                 <br><br>
                 <h2 class="subtitle has-text-justified">
-                    <b>(a,b)</b> In the end-to-end training of an audio-visual concatenation-based network for classification, the dominant au- dio modality rapidly handles the overall model performance and the joint logit scores, while the visual modality
-                    keeps under-optimized.
-                    <b>(c,d)</b> Further tracking on modality-wise norm of weight vectors indicates the easily-trained audio encoder tends to have its weight in norm growing much faster than the weak visual modality.
+                    To deal with the above problem, we propose a multi-modal cosine loss, <b>MMCosine</b>. The main steps are <b>(a)</b> Modality-wise normalization of weight and feature to mitigate the imbalance and <b>scaling with hyperparameter $s$ to guarantee the convergence.</b>
                 </h2>
             </div>
         </div>
